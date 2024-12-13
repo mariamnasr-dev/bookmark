@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site mark</title>
+    <link rel="stylesheet" href="css/all.min.css"> 
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main class="interface py-5 position-relative">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="py-2 position-relative">Bookmarker</h1>
+            <div
+                class=" bookmark-body w-100 p-3 py-4 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2 class="line">
+                    <i class="fa-solid fa-bookmark"></i>
+                    "Bookmark your favorite sites"
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site-name w-100 d-flex flex-column justify-content-center">
+                    <label for="siteName" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-bookmark pe-2"></i>
+                        "site name"
+                    </label>
+                    <input oninput="allValidation(this , 'alertName')" type="text" placeholder="bookmark Name" class="form-control"
+                        id="siteName">
+                    <p id="alertName" class="alert alert-danger p-2 d-none">website name is not valid</p>
+                </div>
+                <div class="site-url w-100 d-flex flex-column justify-content-center">
+                    <label for="siteUrl" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        "site url"
+                    </label>
+                    <input oninput="allValidation(this , 'alertUrl')" type="url" placeholder="bookmark Url" class="form-control"
+                        id="siteUrl">
+                    <p  id="alertUrl"class="alert alert-danger p-2 d-none">website Url is not valid</p>
+                </div>
+                <button class="btn btn-submit px-5 " id="subnitBtn">Submit</button>
+            </div>
+            <table class="table mt-4 text-center bg-light ">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">website Name</th>
+                        <th class="text-capitalize">visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData"></tbody>
+            </table>
+        </div>
+
+        <!-- <div class="">
+        
+       </div> -->
+        <!-- <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+
+       </div> -->
+
+
+
+    </main>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/all.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
